@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- FONT: Press Start 2P --> <!-- Кастомный шрифт с Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel=stylesheet>
+
+    <!-- FONT: Nata sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap" rel="stylesheet">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Подстраиваем экран под другие девайсы -->
+    <link rel="stylesheet" href="Sticker Style.css"> <!-- Подключаем css -->
+    <title>MIX OF STICKER PACKS</title> <!-- Название нашего сайта (согласен фигня, потом поменяю) -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> <!-- Подключаем библиотеку: JQuery-->
+    <script src="Sticker Script.js"></script> <!-- Подключаем наш js Файл -->
+</head>
+<body>
+    <div id="page">
+        <div id="menu"> <!-- Меню (фильтр стикер паков) -->
+            <div class="menuCell" id="main">Основные стикер-паки</div>
+            <div class="menuCell" id="rework">Переработанные стикер-паки</div>
+            <div class="menuCell" id="fandom">Стикер-паки по другим вселенным</div>
+            <div class="menuCell" id="all">Все стикер-паки</div>
+        </div>
+        <div id="box"> <!-- Основная часть страницы (правая) -->
+            <div id="grid"> <!-- Сетка с нашими стикер-паками :> -->
+                <div class="cell main" id="main1"></div>
+                <div class="cell main" id="main2"></div>
+                <div class="cell main" id="main3"></div>
+                <div class="cell main" id="main4"></div>
+                <div class="cell rework" id="rework1"></div>
+                <div class="cell rework" id="rework2"></div>
+                <div class="cell rework" id="rework3"></div>
+                <div class="cell emoji" id="emoji"></div>
+                <div class="cell fandom" id="duo"></div>
+                <div class="cell fandom" id="pvz"></div>
+                <div class="cell fandom" id="undertale"></div>
+                <div class="cell" id="zero"></div>
+                <div class="cell" id="ui"></div>
+                <div class="cell" id="bw"></div>
+                <div class="cell" id="meme"></div>
+            </div>
+        </div>
+        <div id="info"> <!-- info меню (кто бы без меня догадался?)-->
+            <div id="infoGrid"> <!-- Сетка вправляющая текст -->
+                <p id="infoText">text</p> <!-- Текст с названием стикер-пака-->
+                <div id="infoButton">Подробнее</div> <!-- Кнопка "подробнее". В будущем будет переводить на сайт со скачиванием и историей пака -->
+            </div>
+
+            <div id="lock"> 
+                <div id="part1"></div>
+                <div id="part2"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="MIpage">
+        <div id="MIdownload">
+            <div id="downloadGrid">
+                <div id="forWhatsapp" class="download">
+                    <p>Скачать пак для Whatsapp</p>
+                </div>
+                <div id="forTelegram" class="download">
+                    <p>Скачать пак для Telegram</p>
+                </div>
+            </div>
+        </div>
+        <div id="MImenu">
+            <div id="MIbtnStickers" class="MIbutton">Стикеры</div>
+            <div id="MIbtnInfo" class="MIbutton">Информация</div>
+        </div>
+        <div id="MIbox">
+            <div id="MIgrid"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
