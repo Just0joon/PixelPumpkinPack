@@ -579,6 +579,7 @@ $(document).ready(() => {
 
 		pasteStickers() {
 			$('#MIgrid').empty()
+			$('.MIsticker').off('click')
 
 			$(':root').css('--MIgridRepeat', `${Math.floor(this.Stickers.Quantity / 3)}`)
 
@@ -586,7 +587,7 @@ $(document).ready(() => {
 				const stickerId = `#MIsticker${i}`
 				$('#MIgrid').append(
 					`<img 
-                src="${this.Stickers['s' + i]}" 
+                src="${this.Stickers['s' + i]}"
                 class="MIsticker" 
                 id="${stickerId}"
                 onload="this.onload=null;this.style.display='block'"
@@ -594,6 +595,16 @@ $(document).ready(() => {
             >`
 				)
 			}
+			$('.MIsticker').on('click', function() {
+				const src = $(this).attr('src')
+				$('#boxOfImg').css('display', 'grid')
+				$('#stickerImg').attr('src', src)
+				console.log(src)
+				$('#boxOfImg').on('click', () => {
+					$('#boxOfImg').css('display', 'none')
+					$('#boxOfImg').off('click')
+				})
+			})
 			if (!isAppendInfoText) {
 				$('#MIbox').append('<p class="MIinfo" id="MIinfoText"></p>')
 				selected.pasteInfo()
@@ -876,5 +887,6 @@ $(document).ready(() => {
 
 	$('#MIbtnStickers').click(() => selected.showStickerPack())
 	$('#MIbtnInfo').click(() => selected.showStickerPackInfo())
-})
 
+	
+})
