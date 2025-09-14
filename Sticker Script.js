@@ -455,9 +455,41 @@ $(document).ready(() => {
 		Несерьезный стикер-пак по мемам 2024-2025. А так же ошибка человечества.
 	`
 
-	let isShowMainPacks = false
-	let isShowReworks = false
-	let isShowOtherFandomPacks = false
+	let grayPack = {
+		s1: 'Grayscale Pack/Gray Sticker 1.jpg',
+		s2: 'Grayscale Pack/Gray Sticker 2.jpg',
+		s3: 'Grayscale Pack/Gray Sticker 3.jpg',
+		s4: 'Grayscale Pack/Gray Sticker 4.jpg',
+		s5: 'Grayscale Pack/Gray Sticker 5.jpg',
+		s6: 'Grayscale Pack/Gray Sticker 6.jpg',
+		s7: 'Grayscale Pack/Gray Sticker 7.jpg',
+		s8: 'Grayscale Pack/Gray Sticker 8.jpg',
+		s9: 'Grayscale Pack/Gray Sticker 9.jpg',
+		s10: 'Grayscale Pack/Gray Sticker 10.jpg',
+		Quantity: 10,
+	}
+
+	let grayInfo = `
+		Серый стикер-пак имеющий в основном печальное / ворчливое настроение
+	`
+
+	let glitchPack = {
+		s1: 'Glitch Pack/Glitch sticker 1.jpg',
+		s2: 'Glitch Pack/Glitch sticker 2.jpg',
+		s3: 'Glitch Pack/Glitch sticker 3.jpg',
+		s4: 'Glitch Pack/Glitch sticker 4.jpg',
+		s5: 'Glitch Pack/Glitch sticker 5.jpg',
+		s6: 'Glitch Pack/Glitch sticker 6.jpg',
+		s7: 'Glitch Pack/Glitch sticker 7.jpg',
+		s8: 'Glitch Pack/Glitch sticker 8.jpg',
+		s9: 'Glitch Pack/Glitch sticker 9.jpg',
+		s10: 'Glitch Pack/Glitch sticker 10.jpg',
+		Quantity: 10,
+	}
+
+	let glitchInfo = `
+		Glitch Pack - стикер-пак с кучей визуальных багов.
+	`
 
 	let locked = false
 
@@ -782,6 +814,30 @@ $(document).ready(() => {
 		'2025',
 		'31 мая'
 	)
+	glitch = new Cell(
+		'glitch',
+		'Icons/Glitch Pack Icon.png',
+		'#00332fff',
+		'GlitchPack',
+		glitchPack,
+		'https://t.me/addstickers/GlitchPumpkin',
+		'https://getstickerpack.com/stickers/glitch-pack',
+		glitchInfo,
+		'2025',
+		'13 сентября'
+	)
+	gray = new Cell(
+		'gray',
+		'Icons/Gray Icon.png',
+		'#333333',
+		'GrayscalePack',
+		grayPack,
+		'https://t.me/addstickers/GrayscalePumpkin',
+		'https://getstickerpack.com/stickers/grayscale-pack',
+		grayInfo,
+		'2025',
+		'13 сентября'
+	)
 
 	function showMainPacks() {
 		display('.cell', false)
@@ -821,3 +877,4 @@ $(document).ready(() => {
 	$('#MIbtnStickers').click(() => selected.showStickerPack())
 	$('#MIbtnInfo').click(() => selected.showStickerPackInfo())
 })
+
