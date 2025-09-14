@@ -829,7 +829,7 @@ $(document).ready(() => {
 		'glitch',
 		'Icons/Glitch Pack Icon.png',
 		'#00332fff',
-		'GlitchPack',
+		'Glitch Pack',
 		glitchPack,
 		'https://t.me/addstickers/GlitchPumpkin',
 		'https://getstickerpack.com/stickers/glitch-pack',
@@ -841,7 +841,7 @@ $(document).ready(() => {
 		'gray',
 		'Icons/Gray Icon.png',
 		'#333333',
-		'GrayscalePack',
+		'Grayscale Pack',
 		grayPack,
 		'https://t.me/addstickers/GrayscalePumpkin',
 		'https://getstickerpack.com/stickers/grayscale-pack',
@@ -890,3 +890,4 @@ $(document).ready(() => {
 
 	
 })
+
