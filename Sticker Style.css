@@ -1,0 +1,562 @@
+:root {
+    --MIgridSize: 180px;
+    --MIgridRepeat: 10;
+}
+
+
+* { 
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    color: #fff;
+    user-select: none;
+}
+
+
+
+body {
+    margin: 0;
+    background: #222222;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+#page, #MIdownload {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows: 100vh;
+    grid-template-columns: 30vw 70vw;
+}
+
+
+#menu {
+    display: grid;
+    grid-template-columns: 25vw;
+    gap: 10px;
+    grid-template-rows: repeat(4, 10vh);
+    width: 100%;
+    height: 100%; 
+    background-color: #333;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.menuCell {
+    display: grid;
+    place-content: center;
+    position: relative;
+    top: 20px;
+    left: 2.5vw ;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    background-color: #444;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#main {
+    background-color: #00420055;
+    color: #3f3;
+}
+
+#rework {
+    background-color: #42000055;
+    color: #f33
+}
+
+#fandom {
+    background-color: #00004255;
+    color: #33f;
+}
+
+#all {
+    background-color: #424242aa;
+    color: #fff;
+}
+
+#info {
+    display: grid;
+    place-content: center;
+    position: absolute; 
+    right: 0;
+    width: 70vw;
+    height: 10vh;
+    background-color: #292929;
+}
+
+#box {
+    background: #000;
+    border-radius: 12px;
+    display: grid;
+    justify-content: center; 
+    overflow-y: scroll;
+    margin: 100px;
+}
+
+#grid {
+    margin: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 180px);
+    grid-template-rows: repeat(6, 180px);
+    gap: 10px;
+}
+
+#box::-webkit-scrollbar {
+    background-color: #333; 
+}
+
+#box::-webkit-scrollbar-thumb {
+    background-color: #444;
+}
+
+#box::-webkit-scrollbar-thumb:active {
+    background-color: #555;
+}
+
+
+.cell {
+    display: grid;
+    place-content: center;
+    background: #252525;
+    border-radius: 4px;
+    transition: all ease-in-out 50ms;
+}
+
+.cellImg {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    transition: all ease-in-out 100ms;
+}
+
+
+.cell:hover > .cellImg {
+    animation: cellHover infinite ease-in-out 100ms;
+}
+
+#boxOfImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    background-color: #000000aa;
+    z-index: 1000;
+    place-content: center;
+}
+
+#stickerImg {
+    border: white 3px solid
+}
+
+@keyframes cellHover {
+    0% {
+        transform: rotate(1deg) scale(1.1);
+    }
+
+    100% {
+        transform: rotate(-1deg) scale(1.1)
+    }
+}
+
+#infoGrid {
+    display: grid;
+    place-content: center;
+    background: #555;
+    width: 56vw;
+    height: 8vh;
+    grid-template-columns: 30vw 24vw;
+    gap: 10px;
+}
+
+#infoText {
+    display: grid;
+    place-content: center;
+    font-size: 18px;
+}
+
+#infoButton {
+    box-shadow: inset 2px 2px 10px #000000aa;
+    display: grid;
+    place-content: center;
+    background-color: #afa;
+    color: #000;
+    position: relative;
+    top: 10%;
+    height: 80%;
+    border-radius: 12px;
+}
+
+#infoButton:active {
+    box-shadow: inset 2px 2px 2px 2px #000000aa;
+}
+
+#lock {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 10px
+}
+
+#lock > div {
+    position: absolute;
+    background: #444;
+}
+
+#lock > #part2 {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    width: 30px;
+    height: 25px;
+}
+
+#lock > #part1 {
+    position: absolute;
+    top: 10px;
+    left: 15.1px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    outline: 5.55px #444 solid;
+    border-radius: 50%;
+}
+
+#MIpage {
+    display: none;
+    background-color: #000;
+}
+
+#MIdownload {
+    width: 100%;
+    height: 20%;
+    background-color: #222;
+}
+
+
+#downloadGrid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 70%);
+    grid-template-rows: 12.5%;
+    gap: 5%
+}
+
+#MImenu {
+    display: grid;
+    grid-template-rows: repeat(2, 20%);
+    grid-template-columns: 90%;
+    gap: 50px;
+    width: 30%;
+    height: 80%;
+    background-color: #151515;
+}
+
+
+#MIbtnInfo {
+    background: linear-gradient(45deg, #ffffff55, #ffffff77);
+    color: #fff;
+}
+
+
+#MIbtnStickers {
+    background: linear-gradient(45deg, #00ffae55, #00ffae77);
+    color: #00ffae; 
+}
+
+.MIbutton {
+    display: grid;
+    place-content: center;
+    position: relative;
+    left: 5%;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    font-size: 24px;
+    transition: all ease 100ms;
+}
+
+#MIbtnInfo:hover {
+    box-shadow: 2px 2px 100px 2px #ffffff55;
+}
+
+#MIbtnStickers:hover {
+    box-shadow: 2px 2px 100px 2px #00ffae55;
+}
+
+.MIbutton:hover {
+    filter: brightness(1.5) hue-rotate(40deg);
+    transform: translateY(-3px)
+}
+
+
+.download {
+    display: grid;
+    place-content: center;
+    position: relative;
+    top: 25%;
+    left: 125%;
+    border-radius: 16px;
+    font-size: 18px;
+}
+
+.download:hover {
+    animation: downloadHover 3s linear infinite;
+}
+
+@keyframes downloadHover {
+    0% {
+        filter: hue-rotate(0);
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+        filter: hue-rotate(30deg);
+    }
+
+    100% {
+        filter: hue-rotate(0deg);
+        transform:  translateY(0);
+    }
+}
+
+
+#forWhatsapp {
+    background: #2cb742;
+    box-shadow: inset 2px 2px 10px 2px #00ff26;
+}
+
+#forWhatsapp > p {
+    font-family: "Nata Sans", sans-serif;
+    font-weight: bolder;
+    color: white;
+}
+
+#forWhatsapp:hover {
+    box-shadow: 0px 0px 20px 0px #2cb74288;
+}
+
+#forTelegram {
+    background: #0088cc;
+    box-shadow: inset 2px 2px 10px 2px #00aaff;
+}
+
+#forTelegram > p {
+    color: white;
+    font-family: "Nata Sans", sans-serif;
+    font-weight: bolder;
+}
+
+#forTelegram:hover {
+    box-shadow: 0px 0px 20px 0px #0088cc88;
+}
+
+#MIgrid {
+    position: absolute;
+    top: 0%;
+    display: grid;
+    grid-template-columns: repeat(3, var(--MIgridSize));
+    grid-template-rows: repeat(var(--MIgridRepeat), var(--MIgridSize));
+    gap: 10px;
+}
+
+#MIbox {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    background: #000;
+    border-radius: 12px;
+    display: grid;
+    justify-content: center; 
+    overflow-y: scroll;
+    width: 70%;
+    height: 80%;
+}
+
+#MIbox::-webkit-scrollbar {
+    background-color: #033; 
+}
+
+#MIbox::-webkit-scrollbar-thumb {
+    background-color: #044;
+}
+
+#MIbox::-webkit-scrollbar-thumb:active {
+    background-color: #055;
+}
+
+.MIsticker {
+    width: var(--MIgridSize);
+    height: var(--MIgridSize);
+    background: #191919;
+    transition: all ease 100ms;
+}
+
+.MIsticker:hover {
+    background: #202020;
+}
+
+#MIinfoText {
+    position: absolute;
+    top: 5px;
+}
+
+.MIinfo {
+    display: none;
+}
+
+@media (max-width: 1095px) {
+    #grid {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(6, 100px);
+        gap: 3px;
+    }
+
+    .cellImg {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        transition: all ease-in-out 100ms;
+    }
+}
+
+@media (max-width: 827px) {
+    :root {
+        --MIgridSize: 120px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #grid {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 60px);
+        grid-template-rows: repeat(6, 60px);
+        gap: 3px;
+    }
+
+    .cellImg {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        transition: all ease-in-out 100ms;
+    }
+
+    #box {
+        position: relative;
+        top: 25vh;
+        margin: 20px;
+        height: 40vh;
+    }
+
+    .menuCell {
+        font-size: 6px;
+    }
+
+    #infoGrid {
+        position: relative;
+        left: 20px;
+        width: 56vw;
+        height: 8vh;
+        grid-template-columns: 20vw 20vw;   
+        gap: 15px;
+    }
+
+    #infoText {
+        font-size: 12px;
+    }
+
+    #infoButton {
+        font-size: 8px;
+    }
+
+    #lock {
+        position: absolute;
+        left: -2px;
+    }
+
+    #downloadGrid {
+        grid-template-columns: repeat(2, 40vw);
+        gap: 5vw;
+    }
+
+    .download {
+        left: 8vw;
+    }
+
+    #MImenu {
+        grid-template-rows: repeat(2, 12.5%);
+    }
+
+    .MIbutton {
+        font-size: 8px;
+    }
+}
+
+
+@media (max-width: 574px) {
+    :root {
+        --MIgridSize: 80px;
+    }
+
+    #MIgrid {
+        gap: 5px;
+    }
+
+    #stickerImg {
+        width: 300px;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 401px) {
+    :root {
+        --MIgridSize: 60px
+    }
+
+    #MIgrid {
+        gap: 3px;
+    }
+}
+
+
+@media (max-width: 337px) {
+    #grid {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 45px);
+        grid-template-rows: repeat(6, 45px);
+        gap: 3px;
+    }
+
+    .cellImg {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        transition: all ease-in-out 100ms;
+    }
+
+    #infoText {
+        font-size: 10px;
+    }
+
+    #stickerImg {
+        width: 200px;
+        height: auto;
+    }
+}
