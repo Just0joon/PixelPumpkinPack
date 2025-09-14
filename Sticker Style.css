@@ -136,6 +136,24 @@ body {
     animation: cellHover infinite ease-in-out 100ms;
 }
 
+#boxOfImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    background-color: #000000aa;
+    z-index: 1000;
+    place-content: center;
+}
+
+#stickerImg {
+    border: white 3px solid
+}
+
 @keyframes cellHover {
     0% {
         transform: rotate(1deg) scale(1.1);
@@ -498,6 +516,11 @@ body {
     #MIgrid {
         gap: 5px;
     }
+
+    #stickerImg {
+        width: 300px;
+        height: auto;
+    }
 }
 
 
@@ -531,6 +554,9 @@ body {
     #infoText {
         font-size: 10px;
     }
+
+    #stickerImg {
+        width: 200px;
+        height: auto;
+    }
 }
-
-
